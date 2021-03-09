@@ -14,7 +14,6 @@ public class PasswordTest {
     @Test
     @DisplayName("checking return true, is all fine")
     void correctPassword() {
-
         Password password = new Password();
         boolean testCase = password.checkPassword("H@23uabwekl");
         assertTrue(testCase);
@@ -46,6 +45,13 @@ public class PasswordTest {
     void noUpperCase () {
         Password password = new Password();
         boolean testCase = password.checkPassword("h@ksjd34ss");
+        assertFalse(testCase);
+    }
+    @Test
+    @DisplayName("checking if there is a lowercase letter and return false because there are only uppercase")
+    void noLowerCase () {
+        Password password = new Password();
+        boolean testCase = password.checkPassword("HSJ@2LAN982");
         assertFalse(testCase);
     }
 
