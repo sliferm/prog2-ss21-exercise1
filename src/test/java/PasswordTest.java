@@ -65,9 +65,18 @@ public class PasswordTest {
     @DisplayName("only special signs so it returns false")
     void allSpecialSigns () {
         Password password = new Password();
-        boolean testCase = password.checkPassword("()#$?!%/@ ");
+        boolean testCase = password.checkPassword("()#$?!%/@");
         assertFalse(testCase);
     }
+    @Test
+    @DisplayName("there is a space on position 6 and return false")
+    void whiteSpace() {
+        Password password = new Password();
+        boolean testCase = password.checkPassword("HSJk@ la2LAN982");
+        assertFalse(testCase);
+    }
+ 
+
 
 
 }
