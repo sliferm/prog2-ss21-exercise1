@@ -124,5 +124,12 @@ public class PasswordTest {
         boolean testCase = password.checkPassword("HSJk@l1233");
         assertTrue(testCase);
     }
+    @Test
+    @DisplayName("Three times the same number and return false")
+    void repeatedNumbers1() {
+        Password password = new Password();
+        boolean testCase = password.checkPassword("HSJk@l12333");
+        assertTrue(testCase);
+    }
 
 }
