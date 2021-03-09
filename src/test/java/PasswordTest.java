@@ -96,5 +96,12 @@ public class PasswordTest {
         boolean testCase = password.checkPassword("HSJk@l12");
         assertTrue(testCase);
     }
+    @Test
+    @DisplayName("there are two reverse consecutive Numbers and it will be ok and return true")
+    void consecutiveNumbers1() {
+        Password password = new Password();
+        boolean testCase = password.checkPassword("HSJk@l12");
+        assertTrue(testCase);
+    }
 
 }
