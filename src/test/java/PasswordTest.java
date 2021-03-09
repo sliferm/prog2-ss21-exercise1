@@ -100,12 +100,19 @@ public class PasswordTest {
     @DisplayName("there are two reverse consecutive Numbers and it will be ok and return true")
     void consecutiveNumbers1() {
         Password password = new Password();
-        boolean testCase = password.checkPassword("HSJk@l12");
+        boolean testCase = password.checkPassword("HSJk@l21");
         assertTrue(testCase);
     }
     @Test
     @DisplayName("there are three reverse consecutive Numbers and it will be ok and return false")
     void consecutiveNumbers2() {
+        Password password = new Password();
+        boolean testCase = password.checkPassword("HSJk@l321");
+        assertFalse(testCase);
+    }
+    @Test
+    @DisplayName("there are three  consecutive Numbers and it will be ok and return false")
+    void consecutiveNumbers4() {
         Password password = new Password();
         boolean testCase = password.checkPassword("HSJk@l123");
         assertFalse(testCase);
