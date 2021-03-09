@@ -75,7 +75,13 @@ public class PasswordTest {
         boolean testCase = password.checkPassword("HSJk@ la2LAN982");
         assertFalse(testCase);
     }
- 
+    @Test
+    @DisplayName("there is a space on position 1 and return false")
+    void spaceBegin() {
+        Password password = new Password();
+        boolean testCase = password.checkPassword(" HSJk@la2LAN982");
+        assertFalse(testCase);
+    }
 
 
 
