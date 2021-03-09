@@ -129,6 +129,13 @@ public class PasswordTest {
     void repeatedNumbers1() {
         Password password = new Password();
         boolean testCase = password.checkPassword("HSJk@l12333");
+        assertFalse(testCase);
+    }
+    @Test
+    @DisplayName("Three times the same letter and return true")
+    void repeatedLetters() {
+        Password password = new Password();
+        boolean testCase = password.checkPassword("HSJk@l1233aaa");
         assertTrue(testCase);
     }
 
