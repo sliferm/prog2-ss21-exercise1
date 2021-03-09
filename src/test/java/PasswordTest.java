@@ -112,10 +112,17 @@ public class PasswordTest {
     }
     @Test
     @DisplayName("there are three  consecutive Numbers and it will be ok and return false")
-    void consecutiveNumbers4() {
+    void consecutiveNumbers3() {
         Password password = new Password();
         boolean testCase = password.checkPassword("HSJk@l123");
         assertFalse(testCase);
+    }
+    @Test
+    @DisplayName("Two times the same number and return true")
+    void repeatedNumbers() {
+        Password password = new Password();
+        boolean testCase = password.checkPassword("HSJk@l1233");
+        assertTrue(testCase);
     }
 
 }
