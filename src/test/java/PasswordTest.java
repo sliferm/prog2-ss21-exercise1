@@ -138,5 +138,12 @@ public class PasswordTest {
         boolean testCase = password.checkPassword("HSJk@l1233aaa");
         assertTrue(testCase);
     }
+    @Test
+    @DisplayName("Three times the same special Sign and return true")
+    void repeatedSigns() {
+        Password password = new Password();
+        boolean testCase = password.checkPassword("HSJk@l1233@@@");
+        assertTrue(testCase);
+    }
 
 }
