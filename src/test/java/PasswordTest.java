@@ -89,7 +89,12 @@ public class PasswordTest {
         boolean testCase = password.checkPassword("HSJk@la2LAN982 ");
         assertFalse(testCase);
     }
-
-
+    @Test
+    @DisplayName("there are two consecutive Numbers and it will be ok and return true")
+    void consecutiveNumbers() {
+        Password password = new Password();
+        boolean testCase = password.checkPassword("HSJk@l12");
+        assertTrue(testCase);
+    }
 
 }
