@@ -13,10 +13,19 @@ public class PasswordTest {
 
     @Test
     @DisplayName("checking return true, is all fine")
-    void testCheckLength1() {
-        //check length --> too short
+    void correctPassword() {
+
         Password password = new Password();
-        boolean actual = password.checkPassword("H@23uabwekl");
-        assertTrue(actual);
+        boolean testCase = password.checkPassword("H@23uabwekl");
+        assertTrue(testCase);
     }
+
+    @Test
+    @DisplayName("checking return false because the password is to short")
+    void shortPassword () {
+        Password password = new Password();
+        boolean testCase = password.checkPassword("H@23u");
+        assertFalse(testCase);
+    }
+
 }
