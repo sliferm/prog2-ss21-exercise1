@@ -27,5 +27,12 @@ public class PasswordTest {
         boolean testCase = password.checkPassword("H@23u");
         assertFalse(testCase);
     }
+    @Test
+    @DisplayName("checking return false because the password is to long")
+    void longPassword () {
+        Password password = new Password();
+        boolean testCase = password.checkPassword("H@23ukasdlnlknasdklnasdlkn");
+        assertFalse(testCase);
+    }
 
 }
