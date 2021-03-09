@@ -61,6 +61,13 @@ public class PasswordTest {
         boolean testCase = password.checkPassword("HSJkla2LAN982");
         assertFalse(testCase);
     }
+    @Test
+    @DisplayName("only special signs so it returns false")
+    void allSpecialSigns () {
+        Password password = new Password();
+        boolean testCase = password.checkPassword("()#$?!%/@ ");
+        assertFalse(testCase);
+    }
 
 
 }
