@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 public class PasswordTest {
+    @DisplayName("Github: https://github.com/sliferm/prog2-ss21-exercise1")
     @BeforeAll
     static void init() {}
 
